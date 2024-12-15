@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
 }
@@ -10,9 +10,9 @@
 
 html {
   scroll-behavior: smooth;
-  background: #2c156d;
-
-  color: #000000;
+  background: #f4f9ff;
+  font-family: "Baloo 2", sans-serif;
+  color: rgba(68, 68, 68, 1);
 }
 
 body {
@@ -108,18 +108,12 @@ a {
 }
 
 .header {
-  height: 60px;
-  display: flex;
-}
-
-.header {
   position: fixed;
   width: 100%;
   z-index: 5;
-  background: #ffd026;
-  box-shadow: 0px 4px 4px 0px #ff8a01;
-
-  height: 60px;
+  background: transparent;
+  display: flex;
+  height: 100px;
 }
 .header__background {
   position: absolute;
@@ -131,8 +125,7 @@ a {
   z-index: -1;
   -webkit-transition: left 0.3s ease;
   transition: left 0.3s ease;
-  background: #ffd026;
-  box-shadow: 0px 4px 4px 0px #ff8a01;
+  background: #f4f9ff 20.4%;
 }
 .header.is-open .header__background {
   left: 0;
@@ -192,46 +185,46 @@ a {
   flex-direction: column;
 
   align-items: start;
-  gap: 28px;
+  gap: 8px;
   top: 130px;
   position: absolute;
   top: 100%;
   right: -100%;
   width: 100%;
-  height: 457px;
+  height: 657px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 999;
 
-  padding: 43.5px 112px 44.5px 62px;
+  padding: 60px 0;
 
   border-radius: 0px 0px 26px 26px;
 
-  background: #ffd026;
-  box-shadow: 0px 4px 4px 0px #df250b;
+  background: linear-gradient(180deg, #f4f9ff 20.4%, #e1efff 64.4%);
 }
 .navigation__list.is-open {
   right: 0;
 }
 .navigation__link {
   font-family: Poppins;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-decoration: none;
-  color: #1a0d43;
+  color: rgba(2, 9, 3, 1);
+
+  display: block;
+  width: 100vw;
+  margin: 0;
+  padding: 10px 16px;
 }
 
 .navigation__link:hover,
 .navigation__link:focus {
-  border: 2px solid #1a0d43;
-
-  padding: 6px 8px 6px 8px;
-
-  border-radius: 100px;
+  background: rgba(215, 232, 251, 1);
 }
 
 .header.is-open {
@@ -249,12 +242,8 @@ a {
   }
 
   .header {
-    position: fixed;
-    top: 4%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 1200px;
+
     height: 60px;
     padding: 10px 100px;
     display: flex;
@@ -262,13 +251,12 @@ a {
     justify-content: center;
     border-radius: 100px;
     z-index: 1000;
+    margin-top: 22px;
   }
   .header__background {
     border-radius: 100px;
   }
-  .navigation__item-desk {
-    display: none;
-  }
+
   .header__icon-button {
     display: none;
   }
@@ -288,31 +276,40 @@ a {
   .navigation__list {
     background-color: transparent;
     flex-direction: row;
-
+    display: flex;
     position: static;
-    width: 1200px;
+    width: 1400px;
     margin: auto;
 
     padding-block: 0;
     flex: 1;
-    gap: 90px;
+    gap: 20px;
     height: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
   }
   .navigation__link {
+    display: flex;
+    width: auto;
     font-family: Poppins;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 27px;
-    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    color: rgba(2, 9, 3, 1);
   }
-
+  .navigation__link:hover,
+  .navigation__link:focus {
+    background: transparent;
+  }
   .header__icon-home-img {
+    display: none;
+  }
+  .navigation__item-desk {
     display: none;
   }
 }
@@ -322,10 +319,10 @@ a {
   background-size: cover;
   background-position: center;
   width: 375px;
-  height: 903px;
+  height: 837px;
 
   margin: auto;
-  background-image: url("/image/home/Home.png");
+  background-image: url("/img/home//Frame\ 55.png");
 }
 
 .home__container-top {
@@ -334,389 +331,347 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 261px;
+  padding-top: 226px;
+  width: 200px;
+  margin: auto;
 }
 .home-text {
-  font-family: Luckiest Guy;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 32px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 24px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #feb701;
-  text-shadow: -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
-    3px 3px 0 #ffffff;
+  color: rgba(68, 68, 68, 1);
+  padding-bottom: 41px;
 }
 .home__google-button_link {
   display: inline-block;
-  width: 209.33px;
-  height: 69.67px;
-  margin-right: 80px;
+  width: 216.59px;
+  height: 56px;
 }
 
 @media screen and (min-width: 1200px) {
   .home {
     width: 1440px;
-    height: 760px;
-    background-image: url("/image/home/Home\ \(1\).png");
+    height: 800px;
+    background-image: url("/img/home/Frame\ 56.png");
   }
 
   .home__container-top {
     display: flex;
 
     flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    padding: 420px 0 0 118px;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 421px;
+    margin-left: 202px;
+    width: 521px;
   }
   .home-text {
-    font-family: Luckiest Guy;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 46px;
-    text-align: center;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    width: 701px;
 
-    color: #feb701;
-    text-shadow: -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
-      3px 3px 0 #ffffff;
+    padding-bottom: 56px;
   }
   .home__google-button_link {
     display: inline-block;
-    width: 209.33px;
-    height: 69.67px;
-    margin-right: 0px;
-    margin-left: 190px;
+    width: 216.59px;
+    height: 56px;
   }
 }
 .about {
-  padding: 40px 20px;
+  padding: 100px 16px 60px;
   margin: auto;
   width: 375px;
-  height: 1252px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image/about/About\ the\ Game.png");
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
 }
 .about-title {
-  font-family: Luckiest Guy;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 30px;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #340317;
 
-  text-transform: uppercase;
+  color: rgba(2, 9, 3, 1);
 }
 
 .about-text {
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
-  text-align: left;
+  line-height: 24px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 .about-text-bold {
   font-family: Poppins;
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.about-img {
-  margin: 40px 0 32px;
-  width: 335px;
-  height: 420px;
-  border-radius: 32px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-image: url("/image/about/Frame\ 118.png");
-}
+
 @media screen and (min-width: 1200px) {
   .about {
-    padding: 40px 54px;
+    padding: 71px 300px;
     margin: auto;
     width: 1440px;
-    height: 683px;
-
-    background-image: url("/image/about/About\ the\ Game\ \(1\).png");
+    height: 674px;
+    background-image: url("/img/about/Frame\ 57.png");
+    gap: 80px;
   }
 
-  .about-container {
-    display: flex;
-    gap: 32px;
-    margin-top: 40px;
+  .about-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76.8px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 
   .about-text {
     font-family: Poppins;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
-    line-height: 28px;
-    text-align: left;
+    line-height: 36px;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-    width: 653px;
   }
-
-  .about-img {
-    margin: 0;
-    width: 647px;
-    height: 420px;
-
-    background-image: url("/image/about/Frame\ 118\ \(1\).png");
+  .about-text-bold {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 }
 .advantages {
   width: 375px;
-  height: 978px;
-
   margin: auto;
-  background: url("/image/advantages/Feature\ keys.png") no-repeat center /
-    cover;
+  padding: 50px 16px 100px;
 }
-.advantages-container {
-  padding: 40px 20px;
-}
-.advantages-title {
-  font-family: Luckiest Guy;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 
-  color: #ffffff;
-}
 .advantages-list {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 22px;
+  gap: 40px;
   padding-top: 40px;
 }
 .advantages-item {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-direction: row;
-  gap: 14px;
+  gap: 8px;
 }
-.advantages-img {
-  width: 80.58px;
-  height: 80.58px;
-}
+
 .advantages-text-bold {
-  font-family: Luckiest Guy;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 46px;
+  font-family: Baloo 2;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
-  color: #ffffff;
+  color: rgba(2, 9, 3, 1);
 }
 .advantages-text {
-  color: #ffffff;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 24px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
-  width: 241px;
+  padding-top: 8px;
+  color: rgba(68, 68, 68, 1);
 }
 
 @media screen and (min-width: 1200px) {
   .advantages {
     width: 1440px;
-    height: 600px;
-
-    margin: auto;
-    background: url("/image/advantages/Feature\ keys\ \(1\).png") no-repeat
-      center / cover;
+    padding: 128px 430px 150px;
   }
-  .advantages-container {
-    padding: 40px 126px 129px;
-  }
-
   .advantages-list {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    gap: 32px;
-    padding-top: 0;
-    margin-top: 60px;
-    height: 380px;
+    gap: 40px;
+    padding-top: 80px;
+    width: 580px;
   }
   .advantages-item {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     flex-direction: row;
-    gap: 14px;
+    gap: 8px;
+    width: 580px;
   }
-  .advantages-img {
-    width: 80.58px;
-    height: 80.58px;
-  }
+
   .advantages-text-bold {
-    font-family: Luckiest Guy;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 46px;
+    font-family: Baloo 2;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
-    color: #ffffff;
   }
   .advantages-text {
-    color: #ffffff;
     font-family: Poppins;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 30px;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-
-    width: 480px;
   }
 }
 
-.reviews {
+.play {
   width: 375px;
-  height: 1092px;
+  height: 543px;
   margin: auto;
   padding: 40px 20px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url("/image/reviews/Reviews.png");
+  background-image: url("/img/play/Frame\ 58.png");
 }
 
-.reviews-list {
+.play-list {
   margin: auto;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 36px;
+  flex-direction: row;
   padding-top: 40px;
 }
-.reviews-item {
+.play-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 335px;
-  height: 140px;
-  padding: 16px 36px 16px 36px;
-  border-radius: 26px;
-  opacity: 0px;
-  background: #ffffff;
-  border: 1px solid #0c252e;
-  box-shadow: 0px 4px 20px 0px #ffffff;
+  width: 343px;
+  margin: 0 16px;
 }
-
-.reviews-text-bold {
-  font-family: Luckiest Guy;
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 30px;
+.play-img {
+  height: 128px;
+  gap: 0px;
+  opacity: 0px;
+  margin: auto;
+}
+.play-text-bold {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #000;
+  padding: 16px 0;
+  color: rgba(2, 9, 3, 1);
 }
-.reviews-text {
-  color: #000;
+.play-text {
+  color: rgba(68, 68, 68, 1);
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 24px;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-.reviews-button-container {
-  display: none;
-}
+
 @media screen and (min-width: 1200px) {
-  .reviews {
+  .play {
     width: 1440px;
-    height: 400px;
-    background-image: url("/image/reviews/Reviews\ \(1\).png");
-    padding: 40px 0px;
+    height: 599px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 40px 128px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/play/Frame\ 59.png");
   }
 
-  .reviews-list {
+  .play-list {
     margin: auto;
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 36px;
-    padding-top: 46px;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
-  .reviews-item {
-    margin: 0 18px;
+  .play-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 520px;
-    height: 116px;
-    padding: 16px 36px 16px 36px;
-    border-radius: 26px;
-    opacity: 0px;
-    background: #ffffff;
-    border: 1px solid #0c252e;
-    box-shadow: 0px 4px 20px 0px #ffffff;
+    width: 378px;
+    margin: 0 12px;
   }
-  .reviews-button-container {
-    display: flex;
+  .play-img {
+    height: 128px;
+    gap: 0px;
+    opacity: 0px;
+    margin: auto;
+  }
+  .play-text-bold {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .play-text {
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 }
 
 .gallery {
   width: 375px;
   margin: auto;
-  padding: 40px 20px;
-  background: #a0d7ff;
+  padding: 40px 16px;
 }
-.gallery-title {
-  font-family: Luckiest Guy;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 30px;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #340317;
-}
+
 .gallery__item {
-  width: 335px;
-  height: 340px;
-  border-radius: 26px;
+  width: 343px;
+  height: 257px;
+  border-radius: 16px;
   overflow: hidden;
   position: relative;
-  margin: 0 16px;
+  margin: 0 10px;
 }
 
 .gallery__image {
@@ -728,14 +683,14 @@ a {
 }
 
 .gallery__list {
-  width: 340px;
+  width: 375px;
   padding-top: 40px;
 }
 .gallery-button-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 26px;
+  gap: 98px;
   margin-top: 26px;
 }
 
@@ -745,8 +700,8 @@ a {
   padding: 0;
   -webkit-transition: scale 0.3s ease;
   transition: scale 0.3s ease;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 .gallery-button:hover {
@@ -758,37 +713,99 @@ a {
 }
 
 .gallery-button-icon {
-  width: 58.95px;
-  height: 55.69px;
+  width: 40px;
+  height: 40px;
 }
 
 @media screen and (min-width: 1200px) {
   .gallery {
     width: 1440px;
     margin: auto;
-    padding: 0px 0px 57Зч;
+    padding: 80px;
   }
 
-  .gallery__container {
-    padding-top: 29px;
-  }
   .gallery__list {
     margin: auto;
-    width: 1400px;
+    width: 1240px;
+    padding: 40px 0;
   }
   .gallery__item {
-    width: 603px;
-    height: 340px;
-    border-radius: 26px;
-    margin: 0 16px;
+    width: 506px;
+    height: 379px;
+    border-radius: 16px;
+    margin: 0 12px;
   }
 }
+.features {
+  width: 375px;
+  margin: auto;
+  padding: 40px 16px 0;
+  background: linear-gradient(180deg, #f4f9ff 38.5%, #e1efff 100%);
+}
 
+.features-item {
+  width: 278px;
+  height: 456px;
+  padding: 40px 16px 10px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 1);
+  margin: 0 20px;
+}
+.features-text-bold {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(2, 9, 3, 1);
+  padding: 24px 0 8px;
+}
+.features-text {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(68, 68, 68, 1);
+}
+
+.features-list {
+  padding-top: 40px;
+}
+.features-image {
+  width: 343px;
+  height: 343px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    width: 1440px;
+    margin: auto;
+    padding: 80px 15px 0;
+    background: linear-gradient(180deg, #f4f9ff 38.5%, #e1efff 100%);
+  }
+
+  .features-list {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 1300px;
+    margin: auto;
+  }
+  .features-image {
+    width: 492px;
+    height: 481px;
+    margin-top: -130px;
+    margin-left: 933px;
+  }
+}
 .footer {
-  background: #2c156d;
+  background: #e2efff;
 
   color: #fff;
-  padding: 21px 14px;
+  padding: 21px 0;
 }
 .footer-container {
   display: flex;
@@ -796,17 +813,124 @@ a {
   justify-content: center;
   align-items: center;
 
-  gap: 18px;
+  gap: 44px;
 }
 .footer-wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  gap: 4px;
+  gap: 24px;
 }
 .footer-text {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgba(2, 9, 3, 1);
+}
+
+.footer-copyright {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  padding-top: 44px;
+  color: rgba(68, 68, 68, 1);
+}
+.footer-img {
+  width: 375px;
+  height: 119px;
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding: 20px 64px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+
+    gap: 40px;
+  }
+  .footer-container-two {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+    gap: 43px;
+  }
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 41px;
+
+    gap: 24px;
+  }
+  .footer-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .footer-copyright {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding-top: 0px;
+  }
+  .footer-img {
+    width: 375px;
+    height: 119px;
+  }
+}
+.policy-terms-container {
+  flex-direction: column;
+  align-items: start;
+  padding: 137px 16px 40px;
+}
+.policy-terms-title {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: rgba(2, 9, 3, 1);
+}
+
+.policy-terms-text {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  padding-top: 20px;
+}
+.policy-terms-texts {
   font-family: Poppins;
   font-size: 16px;
   font-weight: 400;
@@ -814,106 +938,17 @@ a {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #fff;
-}
-
-.footer-copyright {
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 21px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-
-  color: #ffffff;
-}
-.footer-img {
-  width: 281px;
-  height: 196px;
-}
-@media screen and (min-width: 1200px) {
-  .footer {
-    padding: 0 64px;
-  }
-  .footer-container {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-
-    gap: 111px;
-  }
-  .footer-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    gap: 6px;
-  }
-  .footer-text {
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 27px;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-  }
-
-  .footer-img {
-    width: 288px;
-    height: 200px;
-  }
-}
-.policy-terms-container {
-  flex-direction: column;
-  align-items: start;
-  padding: 100px 20px 40px;
-  background: #fffefb;
-  color: #000;
-}
-.policy-terms-title {
-  font-family: Poppins;
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 48px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-.policy-terms-text {
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-  text-align: justify;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  padding-top: 20px;
-}
-.policy-terms-texts {
-  font-family: Poppins;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 28px;
-  text-align: justify;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 .policy-terms-text-one {
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
-  text-align: justify;
+  line-height: 24px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  padding-top: 20px;
+
+  padding-top: 30px;
 }
 
 .terms-list {
@@ -921,10 +956,10 @@ a {
 
   padding: 20px 0 20px 25px;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
-  text-align: justify;
+  line-height: 24px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 
@@ -938,10 +973,10 @@ a {
   padding-left: 25px;
 
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 28px;
-  text-align: justify;
+  line-height: 24px;
+  text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
@@ -949,10 +984,82 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
+.email-link-color {
+}
 @media screen and (min-width: 1200px) {
   .policy-terms-container {
     padding: 120px 86px 40px;
     align-items: start;
+  }
+  .policy-terms-title {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 76.8px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    color: rgba(2, 9, 3, 1);
+  }
+
+  .policy-terms-text {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 54px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 40px;
+  }
+  .policy-terms-texts {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .policy-terms-text-one {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding-top: 60px;
+  }
+
+  .terms-list {
+    list-style-type: disc;
+
+    padding: 20px 0 20px 25px;
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .terms-lists {
+    list-style-type: disc;
+
+    padding-left: 25px;
+
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
 }
